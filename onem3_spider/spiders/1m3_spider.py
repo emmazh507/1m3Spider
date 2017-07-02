@@ -35,15 +35,16 @@ class onem3point(scrapy.Spider):
 
     def parse_link(self, response):
         soup = BeautifulSoup(response.text, 'lxml')
-        thread_table = soup.find('table', {'summary': 'forum_145'})
-        threads = thread_table.find_all('tbody')
-
+        threads = soup.find('table', {'summary': 'forum_145'}).find_all('tbody')
+        print(len(threads))
         for thread in threads:
             if thread.get('id').find('normalthread') == -1:
                 continue
             mj_info = MJItem()
-            link = thread.find('th', {'class': 'new'}).find('a', {"class": 's', 'class': 'xst'}).get('href')
+            link = thread.find('th', {'class': 'common'}).find('a', {"class": 's', 'class': 'xst'}).get('href')
             yield scrapy.Request(link, meta={'mj_info': mj_info}, callback=self.parse_info)
+
+
 
     def parse(self, response):
         url = 'http://www.1point3acres.com/bbs/forum.php?mod=forumdisplay&fid=145&sortid=311&%1=&sortid=311&page={}'
