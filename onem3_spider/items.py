@@ -8,9 +8,10 @@
 import scrapy
 
 
-class Onem3SpiderItem(scrapy.Item):
+class MJItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    url = scrapy.Field()
     title = scrapy.Field()
     tag = scrapy.Field()
     context = scrapy.Field()
