@@ -63,5 +63,5 @@ class onem3point(scrapy.Spider):
                   total = page
          print(total)
    
-         for i in range(1, 2):
+         for i in range(1, total):
                yield scrapy.Request(url.format(i), callback=self.parse_link) 
