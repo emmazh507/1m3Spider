@@ -15,3 +15,5 @@ class MJItem(scrapy.Item):
     title = scrapy.Field()
     tags = scrapy.Field()
     content = scrapy.Field()
+
+

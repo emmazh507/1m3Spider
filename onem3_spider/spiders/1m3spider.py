@@ -11,7 +11,7 @@ class onem3point(scrapy.Spider):
      # 注释-必须字段，爬虫名，scrapy list命令行会列出name
      name = 'mj_spider'
      # 注释-必须字段，允许的爬取的url域名，如果url中域名不是这段不进行爬取。这里是python的列表类型，可以放多个链接
-     allowed_domians = ['http://www.1point3acres.com']
+     allowed_domians = ['www.1point3acres.com']
      # 注释-必须字段，爬虫启动时首先打开的url。这里是python的列表类型，可以放多个链接# -*- coding: utf-8 -*-
      start_urls = ['http://www.1point3acres.com/bbs/forum-145-1.html']
 
@@ -63,5 +63,5 @@ class onem3point(scrapy.Spider):
                   total = page
          print(total)
    
-         for i in range(1, total):
+         for i in range(1, 2):
                yield scrapy.Request(url.format(i), callback=self.parse_link) 
