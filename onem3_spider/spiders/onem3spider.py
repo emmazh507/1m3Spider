@@ -10,7 +10,7 @@ class Onem3spiderAllSpider(CrawlSpider):
     start_urls = ['http://www.1point3acres.com/bbs/']
 
     rules = (
- 	    Rule(LinkExtractor(allow=("forum-145-1.html", "forum-28-1.html"), ), follow=True),
+ 	Rule(LinkExtractor(allow=("forum-145-1.html", "forum-28-1.html"), ), follow=True),
         #???any better way to deal with next_page???
         Rule(LinkExtractor(allow=(".*fid=145.*", ".*fid=28.*"), ), follow=True),
         Rule(LinkExtractor(allow=('thread.*'), restrict_xpaths=('//table[@summary="forum_145"]', '//table[@summary="forum_28"]', '//span[@id="fd_page_top"]')), callback='parse_item',),
