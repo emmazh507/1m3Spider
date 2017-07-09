@@ -11,6 +11,7 @@ import MySQLdb.cursors
 
 from twisted.enterprise import adbapi
 
+
 class Onem3SpiderPipeline_Json(object):
     #__init__初始化
     def __init__(self):
@@ -102,3 +103,22 @@ class MysqlTwistedPipeline(object):
 
 
 
+class ElasticsearchPipeLine(object):
+    #将数据写入到es
+
+    def process_item(self, item, spider):
+        #将item转换为es的数据
+
+        #####因为pipeline中传递进来的item可能有多种，最好是将对某一item的具体处理放到该item自身的类下，见items.py
+        # mj = MjType()
+        # mj.url = item['url']
+        # mj.title = item['title']
+        # if "tags" in item:
+        #     mj.tags = item['tags']
+        # content = "".join(item["content"])
+        # mj.content = remove_tags(content)
+        # #mj.meta.id==XXX 可以通过meta.id来设置es中存放设置的item id
+        #
+        # mj.save()
+        item.save_to_es()
+        return item
