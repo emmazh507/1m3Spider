@@ -18,6 +18,7 @@ redis_cli = redis.StrictRedis()
 class MJItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    post_date = scrapy.Field()
     url = scrapy.Field()
     title = scrapy.Field()
     tags = scrapy.Field()
@@ -37,6 +38,24 @@ class MJItem(scrapy.Item):
         mj.save()
         #记录每种item的爬取数量
         redis_cli.incr("onem3point_count")
+
+
+class GDQueItem(scrapy.Item):
+    post_date = scrapy.Field()
+    url = scrapy.Field()
+    company = scrapy.Field()
+    position = scrapy.Field()
+    content = scrapy.Field()
+    answer_number = scrapy.Field()
+    question_id = scrapy.Field()
+
+
+class GDAnsItem(scrapy.Item):
+    post_date = scrapy.Field()
+    question_id = scrapy.Field()
+    content = scrapy.Field()
+
+
 
 
 def gen_suggests(index, info_tuple):#tuple可以传递多个值

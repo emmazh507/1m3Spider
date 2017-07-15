@@ -1,0 +1,14 @@
+[INFO  - 2017-07-15T17:55:05.973Z] GhostDriver - Main - running on port 55357
+[INFO  - 2017-07-15T17:55:06.066Z] Session [bc1b9d70-6986-11e7-a68b-0f9e31cd3650] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-07-15T17:55:06.066Z] Session [bc1b9d70-6986-11e7-a68b-0f9e31cd3650] - page.customHeaders:  - {}
+[INFO  - 2017-07-15T17:55:06.067Z] Session [bc1b9d70-6986-11e7-a68b-0f9e31cd3650] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-07-15T17:55:06.067Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: bc1b9d70-6986-11e7-a68b-0f9e31cd3650
+[INFO  - 2017-07-15T17:55:16.698Z] Session [bc1b9d70-6986-11e7-a68b-0f9e31cd3650] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-07-15T17:55:16.698Z] Session [bc1b9d70-6986-11e7-a68b-0f9e31cd3650] - page.customHeaders:  - {}
+[ERROR - 2017-07-15T17:55:24.513Z] Session [bc1b9d70-6986-11e7-a68b-0f9e31cd3650] - page.onError - msg: Warning: It looks like you're using a minified copy of the development build of React. When deploying React apps to production, make sure to use the production build which skips development warnings and is faster. See https://fb.me/react-minification for more details.
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-15T17:55:24.514Z] Session [bc1b9d70-6986-11e7-a68b-0f9e31cd3650] - page.onError - stack:
+  e (https://static.glassdoor.com/static/js/gd-emp-photos-lightbox.js:1)
+
+  phantomjs://platform/console++.js:263 in error
