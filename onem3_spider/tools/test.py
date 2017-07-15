@@ -6,6 +6,7 @@ __author__ = 'emma'
 import redis
 redis_cli = redis.StrictRedis()
 redis_cli.incr("onem3point_count")
+redis_cli.incr("glassdoor_count")
 
 """
 Emmas-MacBook-Pro:redis-3.2.9 emmazhuang$ src/redis-cli 

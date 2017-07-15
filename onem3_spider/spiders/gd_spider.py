@@ -25,14 +25,14 @@ class GdSpiderSpider(scrapy.Spider):
     allowed_domains = ['www.glassdoor.com']
     start_urls = ['http://www.glassdoor.com/']
 
-    has_a = 0
-    no_a = 0
-
     def parse(self, response):
         print(self.isLogin())
         if not self.isLogin():
             self.login()
+
+
         searchlist = ['huawei']
+        urllist = []
         tarlist=['Interview']
         browser = webdriver.PhantomJS("/Users/emmazhuang/Documents/Python/phantomjs-2.1.1-macosx/bin/phantomjs")
         #browser = webdriver.Chrome(executable_path="/Users/emmazhuang/Documents/Python/chromedriver")
@@ -45,35 +45,39 @@ class GdSpiderSpider(scrapy.Spider):
             if cookie['domain'][0] != '.':
                 cookie['domain'] = '.' + cookie['domain']
             browser.add_cookie(cookie)
-        #同样要sleep下加载cookie
         time.sleep(5)
-        browser.find_element_by_css_selector("form input[name='sc.keyword']").send_keys(searchlist[0])
-        browser.find_element_by_css_selector("form button[id='HeroSearchButton']").click()
 
-        # 下拉框选择自动化
-        # browser.get("https://www.glassdoor.com/index.htm")
-        # browser.find_element_by_css_selector("div[class='context-picker inactive']").click();
-        # time.sleep(5)
-        # browser.find_element_by_css_selector("div[class='context-picker'] ul[class='context-choice-list'] li[data-search-type='EMPLOYER']").click();
-        # time.sleep(5)
-        # browser.find_element_by_css_selector("form input[name='sc.keyword']").send_keys(searchlist[0])
-        # browser.find_element_by_css_selector("form button[id='HeroSearchButton']").click()
+        for search in searchlist:
+            browser.get("https://www.glassdoor.com/"+tarlist[0]+"/index.htm")
+            #同样要sleep下加载cookie
+            browser.find_element_by_css_selector("form input[name='sc.keyword']").send_keys(search)
+            browser.find_element_by_css_selector("form button[id='HeroSearchButton']").click()
 
-        browser.switch_to.window(browser.window_handles[1])
-        url = browser.current_url
-        print("HERE-->"+url)
-        #browser.quit()
-        #print(cookies)
+            # 下拉框选择自动化
+            # browser.get("https://www.glassdoor.com/index.htm")
+            # browser.find_element_by_css_selector("div[class='context-picker inactive']").click();
+            # time.sleep(5)
+            # browser.find_element_by_css_selector("div[class='context-picker'] ul[class='context-choice-list'] li[data-search-type='EMPLOYER']").click();
+            # time.sleep(5)
+            # browser.find_element_by_css_selector("form input[name='sc.keyword']").send_keys(searchlist[0])
+            # browser.find_element_by_css_selector("form button[id='HeroSearchButton']").click()
 
-        yield scrapy.Request(url, cookies=cookies, callback=self.parse_page)
+            browser.switch_to.window(browser.window_handles[1])
+            url = browser.current_url
+            print("HERE-->"+url)
+            urllist.append(url)
+
+        browser.quit()
+            #print(cookies)
+        for search_usl in urllist:
+            yield scrapy.Request(search_usl, cookies=cookies, callback=self.parse_page)
 
         #yield scrapy.Request(url, cookies=cookies, callback=self.parse_page)
 
     #extract()一定返回数组，注意提取string值。配合extract_first()使用
     def parse_page(self, response):
         que_list = response.css("div[id='InterviewQuestionList'] div[id^='InterviewQuestionResult']")
-        print("PAGE-->"+response.url)
-        print(len(que_list))
+
         for que in que_list:
             content = que.css("table[class='interviewQuestionText'] p[class^='questionText']::text").extract()[0]
             #???better way
@@ -85,7 +89,6 @@ class GdSpiderSpider(scrapy.Spider):
 
             info = {
                 "post_date":post_date,
-                "url": "NA",
                 "content": content,
                 "position": position,
                 "company": company,
@@ -93,12 +96,9 @@ class GdSpiderSpider(scrapy.Spider):
                 "flag": 0
             }
             ans_url = que.css("table[class='interviewQuestionText'] a::attr(href)").extract_first()
-            if ans_url:
-                ans_url = parse.urljoin(response.url, ans_url)
-                yield scrapy.Request(ans_url, meta=info, callback=self.parse_anwser)
-            else:
-                self.no_a=self.no_a+1
-                yield self.MyItem(info=info)
+            ans_url = parse.urljoin(response.url, ans_url)
+            yield scrapy.Request(ans_url, meta=info, callback=self.parse_anwser)
+
         #next_page
         pages = response.css("div[id='FooterPageNav'] a::attr(href)").extract()
         pages = [parse.urljoin(response.url, url) for url in pages]
@@ -107,28 +107,23 @@ class GdSpiderSpider(scrapy.Spider):
             yield scrapy.Request(page, callback=self.parse_page)
 
 
-
-
-
     def parse_anwser(self, response):
         ans_list = response.css("div[id='InterviewQuestionAnswers'] div[class^='comment']")
+        info = response.meta
+        info["url"] = response.url
+
         answer = ""
         for ans in ans_list:
             content = ans.css("p[class^='commentText']::text").extract()
             content = "\n".join(content)
             answer = "Ans=====\n"+content
-
-            info = response.meta
-            info["url"] = response.url
             info["answer"] = answer
             info["flag"] = 1
-            self.has_a=self.has_a+1;
-            yield self.MyItem(info=info)
+        yield self.MyItem(info=info)
 
 
     def MyItem(self, info):
         #item_loader = ItemLoader(item=GDItem(), response=response)
-        print()
         gd_item = GDItem()
         gd_item["post_date"] = info["post_date"]
         gd_item["url"] = info["url"]
@@ -137,7 +132,6 @@ class GdSpiderSpider(scrapy.Spider):
         gd_item["company"] = info["company"]
         gd_item["position"] = info["position"]
         gd_item["answer"] = info["answer"]
-        print(info["url"])
 
         return gd_item
 

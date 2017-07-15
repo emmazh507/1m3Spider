@@ -67,10 +67,10 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'onem3_spider.pipelines.Onem3SpiderPipeline_Json': 300,
+#    'onem3_spider.pipelines.Onem3SpiderPipeline_Json': 300,
 #    'onem3_spider.pipelines.Onem3SpiderPipeline_sql': 1,
 #    'onem3_spider.pipelines.MysqlTwistedPipeline': 1,
-#    'onem3_spider.pipelines.ElasticsearchPipeLine': 1,
+    'onem3_spider.pipelines.ElasticsearchPipeLine': 1,
 
 }
 

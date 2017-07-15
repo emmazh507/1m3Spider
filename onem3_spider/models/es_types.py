@@ -20,6 +20,7 @@ class MjType(DocType):
     # )
     #添加一个自动补全的字段
     suggest = Completion(analyzer=ik_analyzer)
+    post_date = Text(analyzer="ik_max_word")
     url = Keyword()
     title = Text(analyzer="ik_max_word")
     tags = Keyword()
@@ -32,10 +33,12 @@ class MjType(DocType):
 
 class GDType(DocType):
     suggest = Completion(analyzer=ik_analyzer)
+    post_date = Text(analyzer="ik_max_word")
     url = Keyword()
-    title = Text(analyzer="ik_max_word")
-    tags = Keyword()
+    company = Keyword()
+    position = Keyword()
     content = Text(analyzer="ik_max_word")
+    answer = Text(analyzer="ik_max_word")
 
     class Meta:
         index = "glassdoor"
