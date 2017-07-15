@@ -30,5 +30,19 @@ class MjType(DocType):
         doc_type = 'mj'
 
 
+class GDType(DocType):
+    suggest = Completion(analyzer=ik_analyzer)
+    url = Keyword()
+    title = Text(analyzer="ik_max_word")
+    tags = Keyword()
+    content = Text(analyzer="ik_max_word")
+
+    class Meta:
+        index = "glassdoor"
+        doc_type = 'gd'
+
+
+
 if __name__ == "__main__":
     MjType.init() #根据定义的类直接生成索引信息
+    GDType.init()

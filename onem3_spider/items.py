@@ -40,20 +40,14 @@ class MJItem(scrapy.Item):
         redis_cli.incr("onem3point_count")
 
 
-class GDQueItem(scrapy.Item):
+class GDItem(scrapy.Item):
     post_date = scrapy.Field()
     url = scrapy.Field()
     company = scrapy.Field()
     position = scrapy.Field()
     content = scrapy.Field()
-    answer_number = scrapy.Field()
-    question_id = scrapy.Field()
-
-
-class GDAnsItem(scrapy.Item):
-    post_date = scrapy.Field()
-    question_id = scrapy.Field()
-    content = scrapy.Field()
+    answer = scrapy.Field()
+    flag = scrapy.Field()
 
 
 

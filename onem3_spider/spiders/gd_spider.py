@@ -10,6 +10,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support.ui import Select
+from items import GDItem
+from scrapy.loader import ItemLoader
+
 
 try:
     import urlparse as parse
@@ -21,6 +24,9 @@ class GdSpiderSpider(scrapy.Spider):
     name = 'gd_spider'
     allowed_domains = ['www.glassdoor.com']
     start_urls = ['http://www.glassdoor.com/']
+
+    has_a = 0
+    no_a = 0
 
     def parse(self, response):
         print(self.isLogin())
@@ -63,41 +69,77 @@ class GdSpiderSpider(scrapy.Spider):
 
         #yield scrapy.Request(url, cookies=cookies, callback=self.parse_page)
 
-
+    #extract()一定返回数组，注意提取string值。配合extract_first()使用
     def parse_page(self, response):
-        print(response.status)
+        que_list = response.css("div[id='InterviewQuestionList'] div[id^='InterviewQuestionResult']")
+        print("PAGE-->"+response.url)
+        print(len(que_list))
+        for que in que_list:
+            content = que.css("table[class='interviewQuestionText'] p[class^='questionText']::text").extract()[0]
+            #???better way
+            post_date = que.css("div[class='tbl fill margBotSm'] div[class^='cell']::text").extract()[0]
+            tag = que.css("span[class='authorInfo'] a::text").extract()[0]
+            tag = re.match("^(.*) at (.*) was asked.*$", tag)
+            position = tag.group(1)
+            company = tag.group(2)
 
-        all_urls = response.css("a::attr(href)").extract()
-        all_urls = [parse.urljoin(response.url, url) for url in all_urls]
-        all_urls = filter(lambda x:True if x.startswith("https") else False, all_urls)
-
-        for url in all_urls:
-            # if the page is to a question
-            match_obj = re.match("(.*glassdoor.com/Interview/.*(QTN_\d+).htm$.*)", url)
-            if match_obj:
-                que_url = match_obj.group(1)
-                question_id = match_obj.group(2)
-                yield scrapy.Request(que_url, meta={"question_id":question_id}, callback=self.parse_question)
-
+            info = {
+                "post_date":post_date,
+                "url": "NA",
+                "content": content,
+                "position": position,
+                "company": company,
+                "answer": "no_answer",
+                "flag": 0
+            }
+            ans_url = que.css("table[class='interviewQuestionText'] a::attr(href)").extract_first()
+            if ans_url:
+                ans_url = parse.urljoin(response.url, ans_url)
+                yield scrapy.Request(ans_url, meta=info, callback=self.parse_anwser)
             else:
-                #keep crawl if its page url
-                pass
-                # page_object = re.match("(.*glassdoor.com/Interview/.*(IP\d+).htm$.*)", url)
-                # if page_object:
-                #     page_url = page_object.group(1)
-                #     print("next+page-->"+page_url)
-                #     yield scrapy.Request(url, callback=self.parse_page)
-                # else:
-                #     pass
-
-
-    def parse_question(self, response):
-        print(response.text)
-        pass
+                self.no_a=self.no_a+1
+                yield self.MyItem(info=info)
+        #next_page
+        pages = response.css("div[id='FooterPageNav'] a::attr(href)").extract()
+        pages = [parse.urljoin(response.url, url) for url in pages]
+        pages = filter(lambda x:True if x.startswith("https") else False, pages)
+        for page in pages:
+            yield scrapy.Request(page, callback=self.parse_page)
 
 
 
 
+
+    def parse_anwser(self, response):
+        ans_list = response.css("div[id='InterviewQuestionAnswers'] div[class^='comment']")
+        answer = ""
+        for ans in ans_list:
+            content = ans.css("p[class^='commentText']::text").extract()
+            content = "\n".join(content)
+            answer = "Ans=====\n"+content
+
+            info = response.meta
+            info["url"] = response.url
+            info["answer"] = answer
+            info["flag"] = 1
+            self.has_a=self.has_a+1;
+            yield self.MyItem(info=info)
+
+
+    def MyItem(self, info):
+        #item_loader = ItemLoader(item=GDItem(), response=response)
+        print()
+        gd_item = GDItem()
+        gd_item["post_date"] = info["post_date"]
+        gd_item["url"] = info["url"]
+        gd_item["flag"] = info["flag"]
+        gd_item["content"] = info["content"]
+        gd_item["company"] = info["company"]
+        gd_item["position"] = info["position"]
+        gd_item["answer"] = info["answer"]
+        print(info["url"])
+
+        return gd_item
 
 
     def login(self):
