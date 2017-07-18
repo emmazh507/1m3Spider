@@ -4,7 +4,6 @@ import re
 import scrapy
 import datetime
 from onem3_spider.items import MJItem
-from bs4 import BeautifulSoup
 from scrapy.loader import ItemLoader
 
 
@@ -46,12 +45,14 @@ class MJSpider(scrapy.Spider):
                   continue
               #?????[class='new']
               link = thread.css("tr th[class='common'] a[class='s xst']::attr(href)").extract()[0]
-              post_date = thread.css("td[class='by'] span::attr(title)").extract()[0]
+              post_date = thread.css("td[class='by'] span::attr(title)").extract_first()
+              if not post_date:
+                  post_date = thread.css("td[class='by'] span::text").extract_first()
+                  print("HELLO")
               post_date = re.match("(\d+[-]\d+[-]\d+).*", post_date).group(1)
               #if not re.sub("(.*(\d+[-]\d+[-]\d+).*)", "", post_date):
               #    post_date = datetime.datetime.strptime()
-              print(post_date)
-              print(link)
+
               #yield scrapy.Request(link, meta={'mj_info':mj_info}, callback=self.parse_info)
               yield scrapy.Request(link, meta={"post_date":post_date}, callback=self.parse_info)
 
@@ -72,5 +73,5 @@ class MJSpider(scrapy.Spider):
                   total = page
          print(total)
 
-         for i in range(1, 2):
+         for i in range(1, total):
                yield scrapy.Request(url.format(i), callback=self.parse_link)

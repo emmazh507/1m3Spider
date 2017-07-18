@@ -50,6 +50,8 @@ class GDItem(scrapy.Item):
     content = scrapy.Field()
     answer = scrapy.Field()
     flag = scrapy.Field()
+    suggest = scrapy.Field()
+
 
     def save_to_es(self):
         gd = GDType()
@@ -62,7 +64,7 @@ class GDItem(scrapy.Item):
         gd.answer = self['answer']
         gd.flag = self['flag']
         #mj.meta.id==XXX 可以通过meta.id来设置es中存放设置的item id
-        gd.suggest = gen_suggests(GDType._doc_type.index, ((gd.answer, 5),(gd.content, 5)))
+        gd.suggest = gen_suggests(GDType._doc_type.index, ((gd.company, 10),(gd.content, 5),(gd.answer, 5)))
         gd.save()
         #记录每种item的爬取数量
         redis_cli.incr("glassdoor_count")

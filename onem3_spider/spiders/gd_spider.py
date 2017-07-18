@@ -31,7 +31,7 @@ class GdSpiderSpider(scrapy.Spider):
             self.login()
 
 
-        searchlist = ['huawei']
+        searchlist = ['huawei','apple','yahoo','google','facebook','linkedin', 'twitter', 'amazon']
         urllist = []
         tarlist=['Interview']
         browser = webdriver.PhantomJS("/Users/emmazhuang/Documents/Python/phantomjs-2.1.1-macosx/bin/phantomjs")

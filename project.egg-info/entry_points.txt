@@ -1,3 +1,0 @@
-[scrapy]
-settings = onem3_spider.settings
-

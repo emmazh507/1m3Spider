@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1ab4fae3-ab5b-402e-9dc0-f3bd5e9e3da7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< 7_1
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ghostdriver.log" afterPath="$PROJECT_DIR$/ghostdriver.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mj_info.json" afterPath="$PROJECT_DIR$/mj_info.json" />
@@ -11,6 +12,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/onem3_spider/settings.py" afterPath="$PROJECT_DIR$/onem3_spider/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/onem3_spider/spiders/gd_spider.py" afterPath="$PROJECT_DIR$/onem3_spider/spiders/gd_spider.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/onem3_spider/tools/test.py" afterPath="$PROJECT_DIR$/onem3_spider/tools/test.py" />
+=======
+>>>>>>> local
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,10 +23,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+<<<<<<< 7_1
     <SUITE FILE_PATH="coverage/onem3_spider$start.coverage" NAME="start Coverage Results" MODIFIED="1500019381385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/onem3_spider" />
     <SUITE FILE_PATH="coverage/onem3_spider$main.coverage" NAME="main Coverage Results" MODIFIED="1500162076114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/onem3_spider$test.coverage" NAME="test Coverage Results" MODIFIED="1499676207060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/onem3_spider/tools" />
     <SUITE FILE_PATH="coverage/onem3_spider$es_types.coverage" NAME="es_types Coverage Results" MODIFIED="1499632451251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/onem3_spider/models" />
+=======
+    <SUITE FILE_PATH="coverage/onem3_spider$main.coverage" NAME="main Coverage Results" MODIFIED="1500164975249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/onem3_spider$test.coverage" NAME="test Coverage Results" MODIFIED="1500163581054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/onem3_spider/tools" />
+    <SUITE FILE_PATH="coverage/onem3_spider$es_types.coverage" NAME="es_types Coverage Results" MODIFIED="1500164779231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/onem3_spider/models" />
+>>>>>>> local
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
@@ -31,15 +40,21 @@
       <file leaf-file-name="onem3spider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/onem3_spider/spiders/onem3spider.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< 7_1
             <state relative-caret-position="825">
               <caret line="55" column="96" lean-forward="true" selection-start-line="55" selection-start-column="96" selection-end-line="55" selection-end-column="96" />
+=======
+            <state relative-caret-position="270">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+>>>>>>> local
               <folding>
-                <element signature="e#24#39#0" expanded="true" />
+                <element signature="e#24#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< 7_1
       <file leaf-file-name="mj_info.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mj_info.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,26 +89,71 @@
                 <marker date="1500150399000" expanded="true" signature="1754:1822" ph="INSERT INTO mj... " />
                 <marker date="1500150399000" expanded="true" signature="3147:3254" ph="insert into mj... " />
                 <marker date="1500150399000" expanded="true" signature="3255:3285" ph="UPDATE conte... " />
+=======
+      <file leaf-file-name="1m3spider.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/onem3_spider/spiders/1m3spider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#39#0" expanded="true" />
+>>>>>>> local
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< 7_1
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/onem3_spider/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="158">
               <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+=======
+      <file leaf-file-name="element.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/bs4/element.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="949" column="0" lean-forward="false" selection-start-line="949" selection-start-column="0" selection-end-line="949" selection-end-column="0" />
+>>>>>>> local
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/onem3_spider/pipelines.py">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< 7_1
+            <state relative-caret-position="675">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+=======
+            <state relative-caret-position="328">
+              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+>>>>>>> local
+              <folding>
+                <element signature="e#192#203#0" expanded="true" />
+                <marker date="1500150399000" expanded="true" signature="1061:1138" ph="insert into mj... " />
+                <marker date="1500150399000" expanded="true" signature="1186:1229" ph="insert into mj... " />
+                <marker date="1500150399000" expanded="true" signature="3147:3254" ph="insert into mj... " />
+                <marker date="1500150399000" expanded="true" signature="3255:3285" ph="UPDATE conte... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< 7_1
+      <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/onem3_spider/items.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="57" column="34" lean-forward="false" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+=======
       <file leaf-file-name="es_types.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/onem3_spider/models/es_types.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="47" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="47" />
               <folding>
                 <element signature="e#45#168#0" expanded="true" />
               </folding>
@@ -101,11 +161,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="items.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/onem3_spider/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="57" column="34" lean-forward="false" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+            <state relative-caret-position="-338">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+>>>>>>> local
               <folding>
                 <element signature="e#152#165#0" expanded="true" />
               </folding>
@@ -123,16 +184,25 @@
           </provider>
         </entry>
       </file>
+<<<<<<< 7_1
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+=======
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+>>>>>>> local
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< 7_1
       <file leaf-file-name="start.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/onem3_spider/start.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -141,6 +211,24 @@
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/onem3_spider/spiders/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/onem3_spider/models/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+>>>>>>> local
             </state>
           </provider>
         </entry>
@@ -158,6 +246,7 @@
     <findStrings>
       <find>start_url</find>
       <find>tags</find>
+<<<<<<< 7_1
       <find>laser</find>
       <find>RE</find>
       <find>IP7</find>
@@ -166,6 +255,9 @@
       <find>HERE--</find>
       <find>no</find>
       <find>HERE</find>
+=======
+      <find>es</find>
+>>>>>>> local
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,11 +271,16 @@
         <option value="$PROJECT_DIR$/onem3_spider/start.py" />
         <option value="$PROJECT_DIR$/onem3_spider/spiders/onem3spider.py" />
         <option value="$PROJECT_DIR$/onem3_spider/pipelines.py" />
+<<<<<<< 7_1
         <option value="$PROJECT_DIR$/mj_info.json" />
         <option value="$PROJECT_DIR$/onem3_spider/tools/test.py" />
         <option value="$PROJECT_DIR$/onem3_spider/models/es_types.py" />
         <option value="$PROJECT_DIR$/onem3_spider/settings.py" />
         <option value="$PROJECT_DIR$/onem3_spider/spiders/gd_spider.py" />
+=======
+        <option value="$PROJECT_DIR$/onem3_spider/tools/test.py" />
+        <option value="$PROJECT_DIR$/onem3_spider/models/es_types.py" />
+>>>>>>> local
         <option value="$PROJECT_DIR$/onem3_spider/items.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
@@ -196,7 +293,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< 7_1
     <option name="x" value="27" />
+=======
+    <option name="x" value="4" />
+>>>>>>> local
     <option name="y" value="23" />
     <option name="width" value="1436" />
     <option name="height" value="877" />
@@ -218,6 +319,10 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+<<<<<<< 7_1
+=======
+      <pane id="Scope" />
+>>>>>>> local
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -300,7 +405,10 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< 7_1
       <pane id="Scope" />
+=======
+>>>>>>> local
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -584,11 +692,18 @@
       <item index="3" class="java.lang.String" itemvalue="Python.start" />
     </list>
     <recent_temporary>
+<<<<<<< 7_1
       <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Python.main" />
         <item index="1" class="java.lang.String" itemvalue="Python.start" />
         <item index="2" class="java.lang.String" itemvalue="Python.test" />
         <item index="3" class="java.lang.String" itemvalue="Python.es_types" />
+=======
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.es_types" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+>>>>>>> local
       </list>
     </recent_temporary>
   </component>
@@ -606,7 +721,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< 7_1
     <frame x="27" y="23" width="1436" height="877" extended-state="0" />
+=======
+    <frame x="4" y="23" width="1436" height="877" extended-state="6" />
+>>>>>>> local
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -686,6 +805,7 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+<<<<<<< 7_1
           <url>file://$PROJECT_DIR$/onem3_spider/spiders/gd_spider.py</url>
           <line>97</line>
           <option name="timeStamp" value="17" />
@@ -714,6 +834,14 @@
         </breakpoint>
       </default-breakpoints>
       <option name="time" value="22" />
+=======
+          <url>file://$PROJECT_DIR$/onem3_spider/spiders/1m3spider.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="18" />
+>>>>>>> local
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -723,6 +851,16 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< 7_1
+=======
+    <entry file="file://$PROJECT_DIR$/scrapy.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> local
     <entry file="file://$PROJECT_DIR$/onem3_spider/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -899,6 +1037,16 @@
         </state>
       </provider>
     </entry>
+<<<<<<< 7_1
+=======
+    <entry file="file://$PROJECT_DIR$/scrapy.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> local
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -977,6 +1125,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< 7_1
     <entry file="file://$PROJECT_DIR$/scrapy.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -988,18 +1137,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="13" column="52" lean-forward="false" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+=======
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/elasticsearch_dsl/document.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1695">
+          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+>>>>>>> local
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< 7_1
     <entry file="file://$PROJECT_DIR$/cookies.pkl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/onem3_spider/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+>>>>>>> local
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< 7_1
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/scrapy/utils/trackref.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1012,18 +1175,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/onem3_spider/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> local
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< 7_1
     <entry file="file://$PROJECT_DIR$/onem3_spider/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-174">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/elasticsearch/client/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+>>>>>>> local
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< 7_1
     <entry file="file://$PROJECT_DIR$/onem3_spider/models/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1037,6 +1214,33 @@
         <state relative-caret-position="-2431">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+=======
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/bs4/element.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="949" column="0" lean-forward="false" selection-start-line="949" selection-start-column="0" selection-end-line="949" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/onem3_spider/spiders/onem3spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/onem3_spider/spiders/1m3spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
+>>>>>>> local
         </state>
       </provider>
     </entry>
@@ -1052,19 +1256,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/onem3_spider/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< 7_1
         <state relative-caret-position="-949">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+=======
+        <state relative-caret-position="328">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+>>>>>>> local
           <folding>
             <element signature="e#192#203#0" expanded="true" />
             <marker date="1500150399000" expanded="true" signature="1061:1138" ph="insert into mj... " />
             <marker date="1500150399000" expanded="true" signature="1186:1229" ph="insert into mj... " />
+<<<<<<< 7_1
             <marker date="1500150399000" expanded="true" signature="1754:1822" ph="INSERT INTO mj... " />
+=======
+>>>>>>> local
             <marker date="1500150399000" expanded="true" signature="3147:3254" ph="insert into mj... " />
             <marker date="1500150399000" expanded="true" signature="3255:3285" ph="UPDATE conte... " />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< 7_1
     <entry file="file://$PROJECT_DIR$/onem3_spider/models/es_types.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -1076,9 +1289,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/onem3_spider/spiders/__init__.py">
+=======
+    <entry file="file://$PROJECT_DIR$/main.py">
+>>>>>>> local
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1111,10 +1327,43 @@
         </state>
       </provider>
     </entry>
+<<<<<<< 7_1
     <entry file="file://$PROJECT_DIR$/onem3_spider/spiders/onem3spider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="55" column="96" lean-forward="true" selection-start-line="55" selection-start-column="96" selection-end-line="55" selection-end-column="96" />
+=======
+    <entry file="file://$PROJECT_DIR$/onem3_spider/spiders/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/onem3_spider/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/onem3_spider/models/es_types.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="47" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="47" />
+          <folding>
+            <element signature="e#45#168#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/onem3_spider/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-338">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+>>>>>>> local
           <folding>
             <element signature="e#24#39#0" expanded="true" />
           </folding>

@@ -35,8 +35,8 @@ class GDType(DocType):
     suggest = Completion(analyzer=ik_analyzer)
     post_date = Text(analyzer="ik_max_word")
     url = Keyword()
-    company = Keyword()
-    position = Keyword()
+    company = Text(analyzer="ik_max_word")
+    position = Text(analyzer="ik_max_word")
     content = Text(analyzer="ik_max_word")
     answer = Text(analyzer="ik_max_word")
 
@@ -47,5 +47,5 @@ class GDType(DocType):
 
 
 if __name__ == "__main__":
-    MjType.init() #根据定义的类直接生成索引信息
+    #MjType.init() #根据定义的类直接生成索引信息
     GDType.init()
